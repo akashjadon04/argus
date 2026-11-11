@@ -12,7 +12,7 @@ export function LegalNotice(props: Props) {
       By {props.operation === "signin" ? "signing in" : "signing up"}, you agree
       to our{" "}
       <a
-        href="https://aptabase.com/legal/terms"
+        href="https://www.linkedin.com/in/akashjadon"
         target="_blank"
         className="text-primary hover:underline"
       >
@@ -20,7 +20,7 @@ export function LegalNotice(props: Props) {
       </a>{" "}
       and{" "}
       <a
-        href="https://aptabase.com/legal/privacy"
+        href="https://www.linkedin.com/in/akashjadon"
         target="_blank"
         className="text-primary hover:underline"
       >

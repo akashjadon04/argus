@@ -1,19 +1,9 @@
-import { useAuth } from "../auth/AuthProvider";
-
-type SupportFunctions = {
-  toggleChat: () => void;
-};
-
-export function useSupport(): SupportFunctions {
-  const user = useAuth();
-
-  const toggleChat = () => {
-    window.$crisp?.push(["set", "user:nickname", [user.name]]);
-    window.$crisp?.push(["set", "user:email", [user.email]]);
-    window.$crisp?.push(["set", "user:avatar", [user.avatarUrl]]);
-    window.$crisp?.push(["do", "chat:show"]);
-    window.$crisp?.push(["do", "chat:open"]);
+export function useSupport() {
+  const openSupportChat = () => {
+    window.open("https://www.linkedin.com/in/akashjadon", "_blank", "noopener,noreferrer");
   };
 
-  return { toggleChat };
+  return {
+    openSupportChat,
+  };
 }

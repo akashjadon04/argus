@@ -1,28 +1,17 @@
-import { isSupportEnabled } from "../env";
+import React from "react";
 
 export function SupportChatWidget() {
-  if (!isSupportEnabled) return null;
-
   return (
-    <script
-      type="text/javascript"
-      dangerouslySetInnerHTML={{
-        __html: `
-        window.$crisp = [];
-        window.$crisp.push(["do", "chat:hide"]);
-        window.CRISP_WEBSITE_ID = "6a643f4e-c28f-44df-91af-8072159892ea";
-  
-        document.addEventListener("DOMContentLoaded", function () {
-          setTimeout(() => {
-            d = document;
-            s = d.createElement("script");
-            s.src = "https://client.crisp.chat/l.js";
-            s.async = 1;
-            d.getElementsByTagName("head")[0].appendChild(s);
-          }, 3000);
-        });
-        `,
-      }}
-    ></script>
+    <div className="fixed bottom-4 right-4 z-50">
+      <a
+        href="https://www.linkedin.com/in/akashjadon"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-2 rounded-full bg-slate-900 border border-slate-700 px-4 py-2 text-xs font-medium text-slate-200 shadow-xl hover:bg-slate-800 transition-colors"
+      >
+        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>Developed by Akash Jadon</span>
+      </a>
+    </div>
   );
 }
