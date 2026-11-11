@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" fill="none">
+  <defs>
+    <linearGradient id="argusGradH" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#0D9488" />
+    </linearGradient>
+  </defs>
+  <g transform="translate(10, 5) scale(0.7)">
+    <path d="M10 50 C25 24 75 24 90 50 C75 76 25 76 10 50 Z" stroke="url(#argusGradH)" stroke-width="6" stroke-linecap="round" fill="none" />
+    <circle cx="50" cy="50" r="18" fill="url(#argusGradH)" />
+    <circle cx="50" cy="50" r="8" fill="#F0FDF4" />
+  </g>
+  <text x="85" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-weight="800" font-size="28" letter-spacing="4" fill="#064E3B">ARGUS</text>
+  <text x="87" y="60" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-weight="600" font-size="9" letter-spacing="2" fill="#059669">REAL-TIME TELEMETRY</text>
+</svg>
