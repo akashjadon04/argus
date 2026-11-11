@@ -6,7 +6,7 @@ const pkg = require("./package.json");
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), mkcert()],
+  plugins: [react()],
   define: {
     "import.meta.env.APP_VERSION": JSON.stringify(pkg.version),
   },
@@ -24,8 +24,8 @@ export default defineConfig({
   },
   server: {
     host: '0.0.0.0',
-    port: 3000,
-    https: true,
+    port: 3002,
+    https: false,
     headers: {
       "Content-Security-Policy": `default-src 'self' 'unsafe-inline'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' ; script-src 'self' 'unsafe-inline' ; font-src 'self' ; connect-src https://raw.githubusercontent.com   wss://localhost:3000 https://localhost:3000`,
     },
