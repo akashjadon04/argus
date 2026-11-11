@@ -172,9 +172,6 @@ export default defineConfig({
     host: "0.0.0.0",
     port: 3002,
     https: false,
-    headers: {
-      "Content-Security-Policy": `default-src 'self' 'unsafe-inline' data:; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https:; script-src 'self' 'unsafe-inline' ; font-src 'self' https: data:; connect-src 'self' ws: wss: https:;`,
-    },
   },
   resolve: {
     conditions: ["development", "browser"],
