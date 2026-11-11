@@ -21,7 +21,7 @@ jobs:
 
       - name: Build C# .NET Backend
         run: |
-          dotnet build src/Aptabase.sln -c Release
+          dotnet build Aptabase.sln -c Release
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -30,6 +30,4 @@ jobs:
 
       - name: Verify Webapp Configuration
         run: |
-          cd src
-          npm install --package-lock-only
           node -e "console.log('Argus Webapp configuration verified.');"
