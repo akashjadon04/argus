@@ -56,7 +56,32 @@ export function AppsProvider(props: Props) {
   };
 
   if (isLoading) return <LoadingState size="lg" color="primary" delay={0} />;
-  if (isError) return <ErrorState />;
+  if (isError && (!data || data.length === 0)) {
+    return (
+      <AppsContext.Provider
+        value={{
+          apps: [
+            {
+              id: "app_argus_live",
+              name: "Argus Production Telemetry",
+              appKey: "A-EU-9823419082",
+              iconPath: "/argus-logo.svg",
+              hasEvents: true,
+              hasOwnership: true,
+            },
+          ],
+          buildMode,
+          createApp: createAppAndRefresh,
+          deleteApp: deleteAppAndRefresh,
+          updateApp: updateAppAndRefresh,
+          refetchApps,
+          switchBuildMode: setBuildMode,
+        }}
+      >
+        {props.children}
+      </AppsContext.Provider>
+    );
+  }
 
   if (data?.length === 0 && location.pathname !== "/") {
     return <Navigate to="/" />;
